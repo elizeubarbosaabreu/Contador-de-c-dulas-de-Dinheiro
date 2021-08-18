@@ -27,44 +27,44 @@
 # RESTANTE SEJA 0
 def contarnotas(notas, x, count, valor):
 
-    for n in notas:      
-
-        if valor >= (notas[x]):          
+    for n in notas: 	
+		
+        while valor >= (notas[x]):          
             count += 1
-
-            if valor >= 0:
-                valor -= (notas[x])
-
+            valor -= (notas[x])
+  
             if valor < (notas[x]):
                 print (f'{count} notas de R${(notas[x]):2.2f}')
                 x += 1
-                count = 0            
+                count = 0                       
         else:
             x += 1
+            
 # LISTA DAS NOTAS DISPONIVEIS E DEFINIÇÕES DAS VARIÁVEIS
-notas = [100, 50, 20, 10, 5, 2, 1]
+notas = [100, 50, 20, 10, 5, 2, 1, 0]
 x = count = valor = 0   
 
 # ENTRADA DO VALOR PELO USUAŔIO
 print('\033[7m{:^50}\033[m'.format('CONTADOR DE CÉDULAS'))
- 
-entrada = str(input('''
-Este banco tem notas de:
--R$100.00
--R$50.00
--R$20.00
--R$10.00
--R$5.00
--R$2.00
--R$1.00
-Quantos Reais você deseja sacar?
->>>>>>> R$'''))
-if entrada.isnumeric():
-	valor = int(entrada)			
-else:
-	print("Só vale usar números:")
-	entravalor()
-	
 
+while True:
+	entrada = str(input('''
+Este banco tem notas de:
+	-R$100.00
+	-R$50.00
+	-R$20.00
+	-R$10.00
+	-R$5.00
+	-R$2.00
+	-R$1.00
+>>>>>>> Quando quiser sair Tecle [ctrl]+[c] 
+Quantos Reais você deseja sacar? >>>>>>> R$'''))
+	if entrada.isnumeric():
+		valor = int(entrada)	
+		break				
+	else:
+		print("Só vale usar números:")
+		
+	
 contarnotas(notas, x, count, valor)
 print("Bye")        
