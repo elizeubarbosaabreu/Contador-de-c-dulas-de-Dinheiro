@@ -32,15 +32,15 @@ def contarnotas(notas, x, count, valor):
 	
 	if valor >= 1: 
 		
-		for n in notas:
+		for valor_da_nota in notas:
 			
-			while valor >= (notas[x]):          
+			while valor >= valor_da_nota:          
 				count += 1
-				valor -= (notas[x])
+				valor -= valor_da_nota
 	  
-				if valor < (notas[x]):
+				if valor < valor_da_nota:
 					print('[', end='')
-					print(f'{count:0>2} notas de R${(notas[x]):2.2f}', end='')
+					print(f'{count:0>2} notas de R${valor_da_nota:2.2f}', end='')
 					print(']', end=' ')					
 					x += 1
 					count = 0 
@@ -53,7 +53,7 @@ def contarnotas(notas, x, count, valor):
 
             
 # LISTA DAS NOTAS DISPONIVEIS E DEFINIÇÕES DAS VARIÁVEIS
-notas = [100, 50, 20, 10, 5, 2, 1, 0]
+notas = [100, 50, 20, 10, 5, 2, 1]
 x = count = valor = 0   
 
 # ENTRADA DO VALOR PELO USUAŔIO
@@ -81,5 +81,5 @@ while True:
 	else:
 		print('\nFavor digitar valor numérico, inteiro e maior ou igual a R$1,00')
 		
-# EXECUTA A FUNÇÃO QUE CONTABILIZA AS NOTAS
-contarnotas(notas, x, count, valor)
+	
+contarnotas(notas, x, count, valor) 
