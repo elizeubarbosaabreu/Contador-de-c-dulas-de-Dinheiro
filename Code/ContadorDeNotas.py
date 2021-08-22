@@ -25,7 +25,7 @@
 # CRIA UMA FUNÇÃO COM UM LOOP QUE SUBTRAI UMA NOTA DO VALOR DADO COMEÇANDO
 # PELA MAIOR NOTA DAS NOTAS DEFINIDAS  NA LISTA 'NOTAS', ATÉ QUE O VALOR
 # RESTANTE SEJA 0
-def contarnotas(notas, x, count, valor):
+def contarnotas(notas, count, valor):
 	
 	print('\n\033[7m{:^50}\033[m'.format('Pegue as notas: '))
 	print(f'\nR${valor:2.2f} => ', end='')
@@ -41,20 +41,16 @@ def contarnotas(notas, x, count, valor):
 				if valor < valor_da_nota:
 					print('[', end='')
 					print(f'{count:0>2} notas de R${valor_da_nota:2.2f}', end='')
-					print(']', end=' ')					
-					x += 1
+					print(']', end=' ')	
 					count = 0 
 					
 				if valor == 0:
-					
 					break
-			else:
-				x += 1
 
             
 # LISTA DAS NOTAS DISPONIVEIS E DEFINIÇÕES DAS VARIÁVEIS
 notas = [100, 50, 20, 10, 5, 2, 1]
-x = count = valor = 0   
+count = valor = 0   
 
 # ENTRADA DO VALOR PELO USUAŔIO
 print('\033[7m{:^50}\033[m'.format('CONTADOR DE CÉDULAS'))
@@ -82,4 +78,4 @@ while True:
 		print('\nFavor digitar valor numérico, inteiro e maior ou igual a R$1,00')
 		
 	
-contarnotas(notas, x, count, valor) 
+contarnotas(notas, count, valor) 
